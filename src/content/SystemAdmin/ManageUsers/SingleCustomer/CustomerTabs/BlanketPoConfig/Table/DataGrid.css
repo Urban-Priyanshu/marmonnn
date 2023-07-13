@@ -1,0 +1,56 @@
+.ag-root-wrapper {
+  border: 0;
+}
+
+.ag-row {
+  border: 0;
+}
+
+.ag-row-even {
+  background-color: #f2f2f2;
+}
+
+.ag-row-odd {
+  background-color: #ffff;
+}
+
+.ag-header {
+  background-color: white;
+  border: 0;
+}
+
+.ag-center-cols-container {
+  width: 100%;
+}
+
+/* .ag-body-horizontal-scroll {
+    visibility: hidden;
+} */
+
+.ag-ltr .ag-cell {
+  font-weight: 400;
+  font-size: 12px !important;
+  color: #343d42;
+}
+
+/* .ag-header-cell-label {
+  width: 70%;
+} */
+
+/* .ag-paging-panel {
+  font-size: 10px;
+}
+
+
+.ag-cell-wrap-text {
+  padding: 10px 20px;
+  display: inline-block;
+  line-height: 1.5;
+} */
+
+.ag-cell,
+.ag-full-width-row .ag-cell-wrapper.ag-row-group {
+  /* line-height: 20px; */
+  /* padding-top: 10px !important;
+  padding-bottom: 10px !important; */
+}

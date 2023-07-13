@@ -1,0 +1,994 @@
+@import 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* @import url('/src/assets/fonts/DIN-Regular.ttf');
+@import url('/src/assets/fonts/DIN\ Condensed\ Bold.ttf');
+@import url('/src/assets/fonts/DIN\ Medium.ttf'); */
+
+@font-face {
+  font-family: 'DINCondensed';
+  src: local('DINCondensed'),
+    url(./assets/fonts/DIN\ Condensed\ Bold.ttf) format('woff');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: 'DINCondensed';
+  src: local('DINCondensed'),
+    url(./assets/fonts/DIN\ Condensed\ Bold.ttf) format('woff');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+html,
+body {
+  /* IE 10-11 didn't like using min-height */
+  height: 100%;
+  -webkit-text-size-adjust: auto !important;
+}
+
+/* CUSTOM CSS FOR PAGINATION AND SELECT */
+
+.select__control {
+  height: fit-content !important;
+}
+
+.input_box > div {
+  border: unset !important;
+}
+
+.select__control.select__control--is-disabled.css-1insrsq-control {
+  background: #ffffff !important;
+  border: 2px solid #b8c2c8;
+  border-radius: 4px;
+  color: #15364a;
+}
+
+p,
+a,
+input,
+button,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'DIN' !important;
+}
+
+.css-1s2u09g-control {
+  height: 40px;
+  border-radius: 4px;
+  width: 100%;
+  background: #f4f7f9 !important;
+  border: 2px solid #b8c2c8 !important;
+  color: #15364a;
+}
+
+[aria-label='Go to previous page'],
+[aria-label='Go to next page'] {
+  background-color: #919eab !important;
+  color: white !important;
+}
+
+.MuiPaginationItem-root {
+  color: black;
+}
+
+/*TAB ACTIVE*/
+.tabActive {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 16px;
+  line-height: 22px;
+  background: #ffffff;
+  border-radius: 3px;
+  color: #102132 !important;
+}
+
+.subTabActive {
+  background: #15364a !important;
+  color: white !important;
+}
+
+/******* Custom layout of Scrollbar CSS **************/
+
+::-webkit-scrollbar {
+  width: 10px;
+
+  height: 10px;
+}
+
+.vishnu {
+  width: 100% !important;
+  min-width: 100% !important;
+  margin-bottom: 100px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #c1c1c1;
+  border-radius: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+
+  border-radius: 0.3rem;
+}
+
+.css-79ws1d-MuiModal-root {
+  position: 'inherit !important';
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c1c1c1;
+}
+
+.search-results ::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar .search-results {
+  display: none;
+}
+
+.MuiPagination-root {
+  margin-right: 0px !important;
+  font-size: 14px !important;
+}
+
+.MuiPaginationItem-rounded {
+  border-radius: 4px !important;
+  height: 32px !important;
+  width: 32px !important;
+  font-size: 14px !important;
+}
+
+/* svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-11daz9w-MuiSvgIcon-root {
+  color: white;
+} */
+
+.avatar_box > button > svg {
+  color: white !important;
+}
+
+.MuiPaginationItem-sizeLarge {
+  min-width: 32px;
+  min-height: 32px;
+  font-size: 14px !important;
+}
+
+label#filter-text-box-label {
+  font-weight: 400;
+  font-size: 12px;
+  padding-right: 10px;
+  margin-top: 2px;
+}
+
+input#filter-text-box {
+  padding: 0px 14px;
+  height: 38px;
+  font-family: DIN;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3;
+  /* Light grey */
+  border-top: 10px solid #383636;
+  /* Blue */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+.spinner-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+
+button.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-page.MuiPaginationItem-outlined.MuiPaginationItem-rounded.Mui-selected.MuiPaginationItem-sizeLarge {
+  min-width: 32px;
+  min-height: 32px;
+}
+
+button.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-page.MuiPaginationItem-outlined.MuiPaginationItem-rounded.Mui-disabled.MuiPaginationItem-sizeLarge.Mui-disabled {
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.auth_validation > .MuiFormHelperText-root {
+  color: white !important;
+  font-size: 13px !important;
+  font-family: DIN Alternate !important;
+  line-height: 1 !important;
+}
+
+.MuiFormHelperText-root {
+  color: #b7081e !important;
+  font-size: 13px !important;
+  font-family: DIN Alternate !important;
+  line-height: 1 !important;
+}
+
+.MuiModal-root {
+  overflow: scroll;
+}
+
+/* 
+@media only screen and (max-width: 961px) {
+  .MuiModal-root > div:nth-child(3) {
+    margin-top: 0px !important;
+  }
+
+} */
+
+ul.MuiPagination-ul > li > button {
+  width: 32px !important;
+  height: 32px !important;
+  max-width: 32px !important;
+  min-width: 32px !important;
+  color: #343d42 !important;
+}
+
+ul.MuiPagination-ul > li:nth-last-child(1) > button {
+  color: #ffffff !important;
+}
+
+ul.MuiPagination-ul > li:first-child > button {
+  color: #ffffff !important;
+}
+
+.content {
+  flex: 1 0 auto;
+  /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+
+  margin-bottom: 0px;
+  /* padding-bottom: 200px */
+  /* height: 100% */
+}
+
+.footer {
+  flex-shrink: 0;
+  /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 20px;
+  margin-top: 0px !important;
+}
+
+.MuiPaginationItem-sizeLarge {
+  max-width: 32px !important;
+  max-height: 32px !important;
+}
+
+.basic-multi
+  > .select__control
+  > .select__value-container
+  > .select__multi-value
+  > .select__multi-value__label {
+  max-width: 60px;
+}
+
+.select_multi
+  > .select__control
+  > .select__value-container
+  > .select__multi-value
+  > .select__multi-value__label {
+  /* max-width: 20px; */
+}
+
+::placeholder {
+  color: red;
+}
+
+.rdrDefinedRangesWrapper {
+  display: none;
+}
+
+.MuiCheckbox-root > svg {
+  color: #03862f;
+}
+
+.file_Upload > label {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 322px;
+  max-width: 100%;
+  height: 129px;
+  border: dashed 2px #5e5e5e;
+  padding: 8px 16px 8px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  background: #f0f0f0;
+}
+
+.image_upload > label {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 129px;
+  border: dashed 2px #5e5e5e;
+  padding: 8px 16px 8px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  background: #f0f0f0;
+}
+
+.cart_dialog > .MuiDialog-container > .MuiDialog-paper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 60px 0;
+  border-radius: 0;
+  box-shadow: none;
+  width: 800px;
+  max-width: 800px;
+}
+
+/* .modal_table > div > .ag-layout-auto-height {
+  height: 400px;
+  overflow: scroll;
+} */
+
+div#ui-datepicker-div {
+  z-index: 3000 !important;
+}
+
+.input_box > div > input {
+  background: none !important;
+}
+
+.page-item:not(:first-child) .page-link {
+  margin: 0 3px;
+  border: 1px solid #dfe3e8;
+  color: black;
+  border-radius: 4px;
+}
+
+.page-item.active .page-link {
+  background-color: #ffffff;
+  /* border: 1px solid #343D42; */
+}
+
+.active > a.page-link {
+  margin-left: -1px;
+  color: black;
+}
+
+.stock_component > div {
+  max-height: 30px;
+  margin-top: 5px;
+}
+
+.stock_component > div > input {
+  max-width: 50px;
+  border: 1px solid #d9d9d9 !important;
+  text-align: center;
+}
+
+.increment_button {
+  border: 1px solid #d9d9d9 !important;
+  width: 26px;
+  border-radius: 0px !important;
+}
+
+th.MuiTableCell-root.MuiTableCell-head {
+  background-color: #ffffff !important;
+  color: black;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2 !important;
+  height: 42px !important;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+  height: 42px !important;
+}
+
+.MuiTableCell-root {
+  padding: 5px 16px !important;
+}
+
+.increment_input {
+  border: 1px solid #d9d9d9 !important;
+  padding: 4px 3px;
+}
+
+.bulk_order_modal > div > .ag-root-wrapper.ag-ltr.ag-layout-auto-height {
+  max-height: 500px !important;
+  overflow-y: scroll;
+}
+
+.forecast_modal > div > .ag-root-wrapper.ag-ltr.ag-layout-auto-height {
+  max-height: 500px !important;
+  overflow-y: scroll;
+}
+
+.blanket_po_modal > div > .ag-root-wrapper.ag-ltr.ag-layout-auto-height {
+  max-height: 500px !important;
+  overflow-y: scroll;
+}
+
+.MuiTablePagination-selectLabel,
+.MuiTablePagination-displayedRows {
+  margin: unset !important;
+}
+
+.select__menu {
+  min-width: 300px !important;
+}
+
+fieldset {
+  display: none;
+}
+
+.dueDate > div > div {
+  background: rgb(244, 247, 249) !important;
+  background: rgb(244, 247, 249);
+  border: 1px solid rgb(184, 194, 200);
+  border-radius: 0px !important;
+  height: 40px !important;
+}
+
+.cartDate > div > div {
+  height: 35px !important;
+  background: white !important;
+}
+
+th.MuiTableCell-root.MuiTableCell-head {
+  background-color: #ffffff !important;
+  color: black;
+  font-size: 14px !important;
+}
+
+text.highcharts-credits {
+  display: none;
+}
+
+.css-4jux9i {
+  font-weight: 400;
+  font-size: 14px;
+  color: #15364a;
+  margin-right: 300px;
+  margin-left: 15px;
+}
+
+.css-4qi9pz-MuiGrid-root > .MuiGrid-item {
+  margin-top: 54px;
+  margin-right: 150px;
+}
+
+.ext_user_chart > .MuiGrid-item {
+  margin-top: 60px;
+}
+
+
+
+.MuiButton-label {
+  text-transform: none;
+}
+
+.css-180981h {
+  font-weight: 700;
+  font-size: 12px;
+  color: #15364a;
+  margin-left: 15px;
+}
+
+.edit_external_modal > div:nth-child(3) {
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.ag-cell-focus,
+.ag-cell-no-focus {
+  border: none !important;
+}
+
+/* This CSS is to not apply the border for the column having 'no-border' class */
+.no-border.ag-cell:focus {
+  border: none !important;
+  outline: none;
+}
+
+.Mui-disabled {
+  padding: 0 !important;
+}
+
+.customer_dropDown > .select__control {
+  margin-top: -2px;
+  height: 43px !important;
+  min-width: 500px;
+  border: 1px solid #e6e6e6 !important;
+  background: white !important;
+}
+
+.ag-header-cell-label {
+  font-family: 'DIN' !important;
+}
+
+.ag-ltr .ag-cell {
+  font-size: 12px !important;
+  font-family: 'DIN' !important;
+}
+
+.page-item.active .page-link {
+  background-color: #f2f2f2;
+  /* border: 1px solid #343D42; */
+}
+
+.dashboardDate {
+  width: 216px;
+  height: 40px;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+}
+
+.dashboardDate > span {
+  padding-left: 5px;
+}
+
+input#outlined-search {
+  padding: 9px;
+}
+
+.css-5yhu4s
+  .MuiList-root
+  .MuiListItem-root
+  .MuiButton-root.active
+  > span
+  > div
+  > .active {
+  filter: invert(58%) sepia(93%) saturate(1230%) hue-rotate(176deg)
+    brightness(93%) contrast(105%);
+}
+
+.css-5yhu4s
+  .MuiList-root
+  .MuiListItem-root
+  .MuiButton-root
+  > span
+  > div
+  > img:hover {
+  width: 30px;
+}
+
+.css-1onpvvo-MuiFormControl-root-MuiTextField-root .MuiInputBase-root {
+  background: #f4f7f9;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px !important;
+}
+/* 
+.MuiOutlinedInput-root.MuiInputBase-root.MuiInputBase-colorPrimary.Mui-disabled.MuiInputBase-fullWidth.MuiInputBase-formControl.css-1slspjq {
+  padding: 10px !important;
+}
+
+.MuiOutlinedInput-root.MuiInputBase-root.MuiInputBase-colorPrimary.Mui-disabled.MuiInputBase-fullWidth.MuiInputBase-formControl.css-1slspjq {
+  padding: 10px !important;
+} */
+
+#partDescription {
+  background-color: white !important;
+}
+
+.custom-cls {
+  min-height: 32px !important;
+}
+
+/** My CSS Start Here*/
+
+/* Login, Forgot Password page css */
+.outer-wrapper .inner-wrapper {
+  height: 100vh;
+}
+
+.outer-wrapper .inner-wrapper .page-content,
+.outer-wrapper .inner-wrapper .page-content .content {
+  padding: 0;
+  height: 100%;
+}
+
+.inner-wrapper .page-content .content .login-pg {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-pg .login-form-sec {
+  text-align: left;
+  background: #0d6b97;
+  box-shadow: 0px 12px 40px rgba(1, 53, 86, 0.32);
+  border-radius: 16px;
+  max-width: 385px;
+  width: 100%;
+  padding: 16px;
+}
+.login-pg .login-form-sec.registration-pg {
+  /* max-width: 595px; */
+  max-width: 450px;
+}
+
+.login-pg .login-form-sec .cus-login-form-container {
+  padding: 0 16px;
+}
+
+.login-pg .login-form-sec .cus-login-form-container label {
+  font-family: 'DIN';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  color: white;
+  padding: 24px 0;
+}
+.login-pg .login-form-sec.registration-pg .cus-login-form-container label {
+  padding: 16px 0;
+}
+
+.login-form-sec .cus-login-form-container .cus-login-form {
+}
+
+.login-pg .login-form-sec .cus-top-sec-img {
+  margin-bottom: 8px !important;
+}
+
+.login-pg .login-form-sec .cus-form-field-row {
+  padding-bottom: 18px;
+}
+
+.login-pg .login-form-sec.registration-pg .cus-form-field-row {
+  padding-bottom: 12px;
+}
+
+.login-pg .login-form-sec.registration-pg .cus-form-field-row:last-child {
+  padding-bottom: 6px;
+}
+
+.login-pg .login-form-sec .cus-form-field-row input,
+.login-pg .login-form-sec .cus-form-field-row input:focus,
+.login-pg .login-form-sec .cus-form-field-row input:active,
+.login-pg .login-form-sec .cus-form-field-row input[type='text'],
+.login-pg .login-form-sec .cus-form-field-row input[type='email'],
+.login-pg .login-form-sec .cus-form-field-row input[type='password'] {
+  background: #f4f7f9;
+  border-radius: 4px;
+  width: 100%;
+  height: 36px;
+  padding: 0 8px;
+  padding-left: 8px !important;
+  font-size: 16px;
+  line-height: 36px;
+  color: #343d42;
+  font-family: 'DIN Alternate';
+}
+
+.login-pg .login-form-sec.registration-pg .cus-form-field-row input,
+.login-pg .login-form-sec.registration-pg .cus-form-field-row input:focus,
+.login-pg .login-form-sec.registration-pg .cus-form-field-row input:active,
+.login-pg
+  .login-form-sec.registration-pg
+  .cus-form-field-row
+  input[type='text'],
+.login-pg
+  .login-form-sec.registration-pg
+  .cus-form-field-row
+  input[type='email'],
+.login-pg
+  .login-form-sec.registration-pg
+  .cus-form-field-row
+  input[type='password'] {
+  height: 32px;
+  line-height: 32px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill::first-line {
+  background: #f4f7f9;
+  border-radius: 4px;
+  width: 100%;
+  height: 36px;
+  padding: 0 8px;
+  font-size: 16px;
+  line-height: 36px;
+  color: #343d42;
+  font-family: 'DIN Alternate';
+}
+
+.login-pg .login-form-sec .cus-form-field-row.cus-form-link-row {
+  text-align: right;
+  padding-bottom: 0;
+  margin-top: -6px;
+}
+.login-pg .login-form-sec .cus-form-field-row.cus-form-btn-row {
+  text-align: center;
+}
+.login-pg .login-form-sec .cus-form-field-row.cus-form-link-row a {
+  font-family: 'DIN Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+.login-pg .login-form-sec .cus-form-field-row.cus-form-link-row a:hover {
+  color: #e8e4e4;
+}
+
+.login-pg .login-form-sec .auth_validation .MuiFormHelperText-root.Mui-error {
+  color: #fc8888 !important;
+  font-family: 'Open Sans' !important;
+  font-weight: 400;
+  margin: 3px 8px 0 8px;
+  font-size: 12px !important;
+  top: 37px;
+  left: 0;
+}
+
+/** Manage User Template Creation */
+
+.page-content .content .custom-page-content-parent-sec.MuiBox-root {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.custom-page-content-parent-sec.MuiBox-root .custom-header-sec.MuiBox-root {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 8px 50px;
+  box-sizing: border-box;
+  /* height: auto; */
+  /* z-index: 105; */
+  top: unset;
+  left: unset;
+}
+
+.custom-page-content-parent-sec.MuiBox-root .custom-sidebar-sec.MuiBox-root {
+  position: fixed;
+  width: 96px;
+  display: flex;
+  height: calc(100vh - 60px);
+  top: 50px;
+  padding: 0;
+  overflow: auto;
+  z-index: 104;
+  margin: 0;
+  border: 0;
+}
+.custom-page-content-parent-sec.MuiBox-root
+  .custom-page-content-sec.MuiBox-root {
+  margin: 0;
+  width: calc(100% - 96px);
+  padding: 0;
+  display: flex;
+  z-index: 103;
+  height: calc(100vh - 61px);
+  position: relative;
+  top: 61px;
+  left: 0;
+  /* width: 100%; */
+  box-sizing: border-box;
+  margin-left: 96px;
+  overflow: auto;
+}
+.custom-page-content-parent-sec.MuiBox-root
+  .custom-page-content-sec.MuiBox-root
+  > .MuiBox-root {
+  width: 100%;
+}
+form.custom-pg-titlesticky-sec {
+  position: fixed;
+  height: 96px;
+  padding: 32px 8px 16px 8px;
+  width: calc(100% - 154px);
+  box-sizing: border-box;
+  margin: 0 -8px 0 -8px; /** Fixes of table box-shadow overlapping while scrolling. */
+  display: flex;
+  justify-content: space-between;
+  background: #f8fcff;
+  z-index: 102;
+}
+
+.custom-pg-content-sec .custom-pg-table-content-sec {
+  padding-top: 100px;
+}
+
+.custom-pg-content-sec .custom-pg-tables-content-sec {
+  padding-top: 100px;
+}
+.custom-page-content-sec.MuiBox-root .custom-pg-content-sec {
+  padding-bottom: 32px;
+}
+form.custom-pg-titlesticky-sec .custom-heading-actionable-sec {
+  display: inline-flex;
+}
+.inner-wrapper .footer-section {
+  display: none;
+}
+
+.css-1s2u09g-control,
+.css-1pahdxg-control:hover {
+  border: unset !important;
+  border-color: unset !important;
+  box-shadow: unset !important;
+}
+
+.MuiInput-underline:before {
+  border-bottom: unset;
+}
+
+.MuiInput-underline:after {
+  border-bottom: unset !important;
+}
+
+.css-5knfyj .MuiInputBase-root {
+  padding-left: 10px;
+  height: 40px !important;
+  /* border-radius: 4px!important; */
+  width: 100% !important;
+  background: #f4f7f9 !important;
+  border: unset !important;
+  color: #15364a !important;
+}
+
+.customer_setup {
+  margin-top: -10px;
+}
+
+.MuiFormLabel-root {
+  font-family: 'DIN' !important;
+}
+
+label#filter-text-box-label {
+  background-color: white;
+}
+
+.sortBy > div > div {
+  background-color: #15364a !important;
+  color: white !important;
+}
+
+.sortBy > div > div > div > div {
+  color: white !important;
+}
+
+input#outlined-search {
+  padding: 0px 12px;
+}
+
+.sortText > div:hover {
+  color: black;
+  font-weight: 600;
+}
+
+/* .css-1811r9n-MuiPaper-root-MuiPopover-paper {
+  width: 250px;
+} */
+
+.overFlow_dropdown .select__control {
+  max-height: 70px !important;
+  overflow-y: scroll !important;
+}
+
+.card_portal {
+  height: 450px !important;
+  text-align: center;
+}
+
+select {
+  word-wrap: normal;
+  padding: 7px;
+  border: #cbcbcb 1px solid;
+  border-radius: 5px;
+  font-family: 'DIN' !important;
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 320px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+input[type="number"] {
+    min-width: 50px;
+}
+
+
+.highcharts-legend {
+  pointer-events: none;
+}
+
+.ag-header-row.ag-header-row-column-group {
+  background: #D9D9D9;
+} 
+
+
+.MuiPagination-ul {
+  justify-content: flex-end;
+}
